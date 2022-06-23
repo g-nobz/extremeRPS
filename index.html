@@ -23,35 +23,38 @@
 
     <script type="text/javascript">
 
-        var computerChoices = ["rock", "paper", "scissors"];
+        var computerChoices = ["Rock", "Paper", "Scissors"];
 
         
-            var userInput = prompt("Please choose and type Rock, Paper, or Scissors");
+            do{
+                var userInput = prompt("Please choose and type Rock, Paper, or Scissors");
+            }while(!(userInput == "Rock" || userInput == "Paper" || userInput == "Scissors"))
 
 
         var computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-
-        if(computerChoice == userInput.toLowerCase){
+        if(computerChoice == userInput){
             alert("This game ended in a tie!");
-        }else if(computerChoice == "rock"){
-            if(userInput.toLowerCase == "paper"){
+        }else if(computerChoice == "Rock"){
+            if(userInput == "Paper"){
                 alert("You win!");
-            }else if(userInput.toLowerCase == "scissors"){
+            }else if(userInput == "Scissors"){
                 alert("You lose!");
             }
-        }else if(computerChoice == "paper"){
-            if(userInput.toLowerCase == "rock"){
+        }else if(computerChoice == "Paper"){
+            if(userInput == "Rock"){
                 alert("You lose!");
-            }else if(userInput.toLowerCase == "scissors"){
+            }else if(userInput == "Scissors"){
                 alert("You win!");
             }
-        }else if(computerChoice == "scissors"){
-            if(userInput.toLowerCase == "rock"){
+        }else if(computerChoice == "Scissors"){
+            if(userInput == "Rock"){
                 alert("You win!");
-            }else if(userInput.toLowerCase == "paper"){
+            }else if(userInput == "Paper"){
                 alert("You lose!");
             }
+        }else{
+            alert("Sorry, you did not type in Rock, Paper, or Scissors");
         }
     </script>
 </body>
