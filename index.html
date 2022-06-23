@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is extreme RPS!</h1>
+
+    <br>
+
+    <p>
+        Here are the rules:
+    </p>
+
+    <ul>
+        <li>Rock beats Scissors</li>
+        <li>Scissors beats Paper</li>
+        <li>Paper beats Rock</li>
+    </ul>
+
+    <script type="text/javascript">
+
+        var computerChoices = ["rock", "paper", "scissors"];
+
+        do{
+            var userInput = prompt("Please choose and type Rock, Paper, or Scissors")
+        }while(!(userInput.toLowerCase == "rock" || userInput.toLowerCase == "paper" || userInput.toLowerCase == "scissors"))
+
+        var computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+        if(computerChoice == userInput.toLowerCase){
+            alert("This game ended in a tie!");
+        }else if(computerChoice == "rock"){
+            if(userInput.toLowerCase == "paper"){
+                alert("You win!");
+            }else if(userInput.toLowerCase == "scissors"){
+                alert("You lose!");
+            }
+        }else if(computerChoice == "paper"){
+            if(userInput.toLowerCase == "rock"){
+                alert("You lose!");
+            }else if(userInput.toLowerCase == "scissors"){
+                alert("You win!");
+            }
+        }else if(computerChoice == "scissors"){
+            if(userInput.toLowerCase == "rock"){
+                alert("You win!");
+            }else if(userInput.toLowerCase == "paper"){
+                alert("You lose!");
+            }
+        }
+    </script>
+</body>
+</html>
