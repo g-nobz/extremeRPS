@@ -25,10 +25,12 @@
 
         var computerChoices = ["Rock", "Paper", "Scissors"];
 
-        
-            do{
+            var userInput = prompt("Please choose and type Rock, Paper, or Scissors");
+            while(!(userInput == "Rock" || userInput == "Paper" || userInput == "Scissors")){
+                alert("Make sure you capitalize the first letter!");
                 var userInput = prompt("Please choose and type Rock, Paper, or Scissors");
-            }while(!(userInput == "Rock" || userInput == "Paper" || userInput == "Scissors"))
+
+            }
 
 
         var computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
